@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SpritePickScreen"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/custom_yellow"
+    >
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:insetLeft="5dp"
+        android:onClick="startGameRegular"
+        android:text="PRESS TO START"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:rippleColor="@color/custom_yellow"
+        app:strokeColor="@color/custom_yellow"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/endless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:insetLeft="5dp"
+        android:onClick="startGameEndless"
+        android:text="ENDLESS MODE"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/doneButton"
+        app:rippleColor="@color/custom_yellow"
+        app:strokeColor="@color/custom_yellow"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vanillacaramel"
+        android:text="CHOOSE YOUR CHARACTER:"
+        android:textAlignment="center"
+        android:textColor="@color/custom_red"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vanillacaramel"
+        android:text="NAME YOUR CAPYBARA:"
+        android:textColor="@color/custom_red"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vanillacaramel"
+        android:text="CHOOSE A DIFFICULTY:"
+        android:textColor="@color/custom_red"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerName"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <ImageButton
+        android:id="@+id/pink_capybara"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:backgroundTint="#00FFFFFF"
+        android:contextClickable="true"
+        android:foregroundGravity="bottom"
+        android:onClick="setSprite"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198"
+        app:srcCompat="@drawable/pink_capybara" />
+
+    <ImageButton
+        android:id="@+id/brown_capybara"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:backgroundTint="#00FFFFFF"
+        android:contextClickable="true"
+        android:onClick="setSprite"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/pink_capybara"
+        app:layout_constraintEnd_toStartOf="@+id/pink_capybara"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pink_capybara"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/brown_capybara" />
+
+    <ImageButton
+        android:id="@+id/green_capybara"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#00DC1B1B"
+        android:contextClickable="false"
+        android:onClick="setSprite"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/pink_capybara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pink_capybara"
+        app:layout_constraintTop_toTopOf="@+id/pink_capybara"
+        app:srcCompat="@drawable/green_capybara" />
+
+    <EditText
+        android:id="@+id/playerName"
+        android:layout_width="270dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:fontFamily="@font/vanillacaramel"
+        android:hint="Name your capy!"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/vanillacaramel"
+        android:text="Character details invalid!"
+        android:textColor="@color/custom_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doneButton"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/easyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setLives"
+        android:text="Easy"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumButton"
+        app:layout_constraintEnd_toStartOf="@+id/mediumButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mediumButton" />
+
+    <Button
+        android:id="@+id/mediumButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setLives"
+        android:text="Medium"
+        app:layout_constraintBottom_toTopOf="@+id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <Button
+        android:id="@+id/hardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setLives"
+        android:text="Hard"
+        app:layout_constraintBottom_toBottomOf="@+id/mediumButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mediumButton"
+        app:layout_constraintTop_toTopOf="@+id/mediumButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
