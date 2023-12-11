@@ -1,6 +1,5 @@
 # Happy Capy
-This is the Android game I built for my Objects & Design class at Georgia Tech.
-The game is a Capybara-themed version of the retro game Frogger. 
+CS2340 Project: Capybara-themed version of Frogger. 
 
 <p align="center">
 <img src="https://github.com/ovadiagal/Happy-Capy/assets/102482702/364d5519-3b5d-425a-bd70-559f6c8973ba" width="300">
